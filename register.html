@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <style>
+        input,select{
+            margin-top: 40px;
+        }
+        .frm{
+            background-color: #5e7777;
+            border-radius: 30px;
+            /* height: 80%; */
+        }
+    </style>
+</head>
+<body>
+    <div class="frm">
+        <center>
+        <form action="" onsubmit="fun1()">
+            Name : <input type="text" required placeholder="Enter your name"> <br>
+            male :
+            <input type="radio" id="male" name="gender" value="male">
+            female :
+            <input type="radio" id="female" name="gender" value="female"> <br>
+            enter e mail
+            <input type="emial" required> <br>
+            <select name="cars" id="cars">
+                <option value="pune">pune</option>
+                <option value="mumbai">mumbai</option>
+              </select> 
+              <br>
+            software knowledge : word : <input type="checkbox"> excel : <input type="checkbox"> linux : <input type="checkbox">
+            remarks : <input type="textaarea"><br>
+            <input type="submit">
+        </form>
+    </center>
+    </div>
+    <script>
+function fun1(){
+    alert("data recieved");
+}
+    </script>
+</body>
+</html>
