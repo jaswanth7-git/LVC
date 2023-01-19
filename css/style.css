@@ -1,0 +1,10 @@
+body {
+    font-family: Verdana, sans-serif; font-size:0.8em;
+}
+ /* section,article,footer,figure{
+    border:1px solid rgb(0, 0, 0); margin:5px; padding:8px;
+} */
+iframe, nav{
+    margin-top: 10px;
+}
+
