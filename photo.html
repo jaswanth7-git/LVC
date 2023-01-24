@@ -1,72 +1,124 @@
-<center><table>
-    <tr>
-      <td><img class="shadow" src="./images/download.jpeg" alt=""></td>
-      <td><img class="shadow" src="./images/download2.jpeg" alt=""></td>
-      <td><img class="shadow" src="./images/download3.jpeg" alt=""></td>
-    </tr>
-    <tr>
-        <td><img class="shadow" src="./images/download.jpeg" alt=""></td>
-        <td><img class="highly-transparent" src="./images/download2.jpeg" alt=""></td>
-        <td><img class="highly-transparent" src="./images/download3.jpeg" alt=""></td>
-      </tr>
-      <tr>
-        <td><img class="complete-sepia" src="./images/download.jpeg" alt=""></td>
-        <td><img class="complete-sepia" src="./images/download2.jpeg" alt=""></td>
-        <td><img class="highly-transparent" src="./images/download3.jpeg" alt=""></td>
-      </tr>
-  </table>
-</center>
+<div class="container">
+	<div class="gallery">
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="./images/img1.jpeg" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="./images/img2.jpeg" alt="sunset behind San Francisco city skyline">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="./images/img3.jpeg" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="./images/four.jpeg" alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="./images/five.jpeg" alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="./images/img4.jpeg" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
+		</div>
+
+	</div>
+
+</div>
 
 
 
-
-</table>
 <style>
-table td{
-padding: 10px;
-text-align: center;
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
 }
-img.shadow {
-filter: drop-shadow(2px 2px 4px rgb(255, 0, 0));
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
-img.highly-transparent {
-filter: opacity(20%);
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
 }
-img.complete-sepia {
-    filter: sepia(60%);
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
 }
-img.partial-sepia {
-    filter: sepia(30%);
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
 }
-/* Some CSS to beautify this example */
-table td{
-    padding: 10px;
-    text-align: center;
+
+.heading span {
+	display: block;
 }
-td:hover{
-    opacity: 0.5;
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
 }
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
 </style>
-
-
-<style> 
-div
-{
-width:300px;
-height:100px;
-background-color:yellow;
-box-shadow: 10px 10px 5px #888888;
-}
-img .shadow {
-    filter: drop-shadow(2px 2px 4px orange);
-}
-img .shadow-large {
-    filter: drop-shadow(4px 4px 10px orange);
-}
-
-table td{
-    padding: 10px;
-    text-align: center;
-}
-</style>
-
